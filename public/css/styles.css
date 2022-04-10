@@ -97,6 +97,22 @@ button:disabled {
     overflow-y: scroll;
 }
 
+.chat__sidebar::-webkit-scrollbar{
+    width: 10px;
+}
+
+.chat__sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat__sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.chat__sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* Chat Styles */
 
 .chat__main {
@@ -111,6 +127,23 @@ button:disabled {
     padding: 24px 24px 0 24px;
     overflow-y: scroll;
 }
+
+.chat__messages::-webkit-scrollbar{
+    width: 10px;
+}
+
+.chat__messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat__messages::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.chat__messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 
 /* Message Styles */
 
