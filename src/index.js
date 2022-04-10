@@ -29,7 +29,7 @@ io.on('connection', (socket) => {
 
         socket.join(user.room)
 
-        socket.emit('message', generateMessage('SULTAN TUNÇ HAZRETLERİ KERVANI YÖNETİMİ', 'Kervansarayımıza Hoşgeldiniz!'))
+        socket.emit('message', generateMessage('Admin', 'Welcome'))
         socket.broadcast.to(user.room).emit('message', generateMessage(`${user.username} has joined!`))
         io.to(user.room).emit('roomData', {
             room: user.room,
@@ -64,7 +64,7 @@ io.on('connection', (socket) => {
         const user = removeUser(socket.id)
 
         if (user) {
-            io.to(user.room).emit('message', generateMessage(user.username, 'Kervansarayımızdan çıkış yaptı.'))
+            io.to(user.room).emit('message', generateMessage(user.username, 'odadan çıkış yaptı.'))
             io.to(user.room).emit('roomData', {
                 room: user.room,
                 users: getUsersInRoom(user.room)
